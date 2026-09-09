@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>超・密着型Webパートナー | 格安HP制作×インスタ運用代行</title>
+    
+    <!-- Google Fonts: Noto Sans JP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkbase: '#0a0a0a',
+                        crimson: '#E60012', // 鮮やかな赤（アクセント）
+                        bordergray: '#333333'
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* カスタムスタイル（アニメーション用） */
+        body {
+            background-color: #0a0a0a;
+            color: #f3f4f6;
+            -webkit-font-smoothing: antialiased;
+        }
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-up.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* スクロールバーのカスタマイズ（ダークテーマ） */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333333;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #E60012;
+        }
+    </style>
+</head>
+<body class="font-sans pb-20 md:pb-0">
+
+    <!-- Header (Navbar) -->
+    <header class="fixed w-full top-0 z-50 bg-darkbase/90 backdrop-blur-sm border-b-2 border-bordergray">
+        <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+            <a href="index.html" class="text-2xl font-black tracking-wider text-white">
+                WEBPARTNER<span class="text-crimson">.</span>
+            </a>
+            
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-white font-bold hover:text-crimson transition-colors duration-300">HOME</a>
+                <a href="service.html" class="text-gray-400 font-bold hover:text-crimson transition-colors duration-300">SERVICE</a>
+                <a href="works.html" class="text-gray-400 font-bold hover:text-crimson transition-colors duration-300">WORKS</a>
+                <a href="philosophy.html" class="text-gray-400 font-bold hover:text-crimson transition-colors duration-300">PHILOSOPHY</a>
+            </nav>
+
+            <a href="contact.html" class="hidden md:inline-flex bg-crimson text-white font-bold py-3 px-6 border-2 border-crimson hover:bg-transparent hover:text-crimson transition-colors duration-300">
+                無料相談はこちら
+            </a>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-btn" class="md:hidden flex flex-col justify-center items-center w-10 h-10 space-y-2">
+                <span class="block w-8 h-1 bg-white transition-transform duration-300 origin-center"></span>
+                <span class="block w-8 h-1 bg-white transition-opacity duration-300"></span>
+                <span class="block w-8 h-1 bg-white transition-transform duration-300 origin-center"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-darkbase border-b-2 border-bordergray">
+            <nav class="flex flex-col px-4 py-6 space-y-4">
+                <a href="index.html" class="text-white text-lg font-bold border-b border-bordergray pb-2">HOME</a>
+                <a href="service.html" class="text-gray-400 text-lg font-bold border-b border-bordergray pb-2">SERVICE</a>
+                <a href="works.html" class="text-gray-400 text-lg font-bold border-b border-bordergray pb-2">WORKS</a>
+                <a href="philosophy.html" class="text-gray-400 text-lg font-bold border-b border-bordergray pb-2">PHILOSOPHY</a>
+                <a href="contact.html" class="text-gray-400 text-lg font-bold pb-2">CONTACT</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center pt-20">
+        <!-- 背景画像と暗いフィルター（ダーク＆ボールド世界観の強制統一） -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32b7?q=80&w=2000&auto=format&fit=crop" alt="ビジネスシーン" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-black/80 mix-blend-multiply"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto fade-up">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-black leading-tight mb-8">
+                「作る」で終わらせない。<br>
+                効率度外視であなたのビジネスに伴走する、<br>
+                <span class="text-crimson">超・密着型Webパートナー。</span>
+            </h1>
+            <p class="text-lg md:text-2xl text-gray-300 font-bold mb-12">
+                格安・爆速のHP制作 × 泥臭く並走するインスタ運用代行
+            </p>
+            <a href="contact.html" class="inline-flex items-center justify-center bg-crimson text-white text-lg md:text-xl font-bold py-4 px-10 border-2 border-crimson hover:bg-darkbase hover:text-crimson transition-all duration-300">
+                まずは無料で現状を相談する
+                <svg class="w-6 h-6 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Target & Problem Section -->
+    <section class="py-24 bg-darkbase border-b-2 border-bordergray">
+        <div class="max-w-4xl mx-auto px-4 fade-up">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-black text-white mb-4">こんな「怒り」や「悩み」、<br class="md:hidden">抱えていませんか？</h2>
+                <div class="w-16 h-2 bg-crimson mx-auto"></div>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="bg-black border-2 border-bordergray p-8 flex items-start">
+                    <span class="text-crimson text-4xl font-black mr-6">01</span>
+                    <p class="text-xl md:text-2xl font-bold text-gray-200 leading-relaxed">
+                        高いお金を払って綺麗なHPを作ったのに、結局誰からも見られず放置状態になっている。
+                    </p>
+                </div>
+                <div class="bg-black border-2 border-bordergray p-8 flex items-start">
+                    <span class="text-crimson text-4xl font-black mr-6">02</span>
+                    <p class="text-xl md:text-2xl font-bold text-gray-200 leading-relaxed">
+                        「これからはSNSだ」と言われるが、運用の正解も、映える写真の撮り方も分からない。
+                    </p>
+                </div>
+                <div class="bg-black border-2 border-bordergray p-8 flex items-start">
+                    <span class="text-crimson text-4xl font-black mr-6">03</span>
+                    <p class="text-xl md:text-2xl font-bold text-gray-200 leading-relaxed">
+                        制作会社は「作って終わり」。IT用語ばかり並べられ、その後の手厚いサポートが全くない。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3 Promises (Strengths) Section -->
+    <section class="py-24 bg-black border-b-2 border-bordergray">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16 fade-up">
+                <p class="text-crimson font-bold tracking-widest mb-2">OUR PROMISE</p>
+                <h2 class="text-3xl md:text-5xl font-black text-white mb-4">私たちがお約束する「3つの強み」</h2>
+                <p class="text-gray-400 font-bold">業者ではなく、あなたの「右腕」として並走します。</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Promise 1 -->
+                <div class="bg-darkbase border-2 border-bordergray p-8 fade-up">
+                    <div class="text-crimson mb-6">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4">1. 圧倒的な導入のしやすさ</h3>
+                    <p class="text-gray-300 font-bold leading-relaxed">
+                        専門的なIT用語は一切使いません。初期費用を極限まで抑えた「底ハードル」なHP制作で、あなたのビジネスのデジタル化を最速で実現します。
+                    </p>
+                </div>
+                <!-- Promise 2 -->
+                <div class="bg-darkbase border-2 border-bordergray p-8 fade-up" style="transition-delay: 100ms;">
+                    <div class="text-crimson mb-6">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4">2. 領域を超えたフルサポート</h3>
+                    <p class="text-gray-300 font-bold leading-relaxed">
+                        単なる投稿代行には留まりません。BtoB特化のプロモーション台本構築から、現場での画角・カメラワークの指導、日々のDM対応まで、集客に必要な実務をすべて巻き取ります。
+                    </p>
+                </div>
+                <!-- Promise 3 -->
+                <div class="bg-darkbase border-2 border-bordergray p-8 fade-up" style="transition-delay: 200ms;">
+                    <div class="text-crimson mb-6">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.514"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4">3. 「人を笑顔にする」熱量</h3>
+                    <p class="text-gray-300 font-bold leading-relaxed">
+                        私たちが最優先するのは「効率」ではなく、お客様の「成果」と「笑顔」です。マニュアル通りの対応は捨て、ビジネスを共に伸ばすパートナーとして全力で向き合います。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Teaser Section -->
+    <section class="py-24 bg-darkbase border-b-2 border-bordergray">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-12 fade-up">
+                <div class="w-full md:w-1/2 relative h-80 border-2 border-bordergray">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1000&auto=format&fit=crop" alt="ミーティング風景" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/50 mix-blend-multiply"></div>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-black text-white mb-6">「インスタ×HP」の<br class="hidden md:block">最強の相乗効果を生み出す。</h2>
+                    <p class="text-gray-300 font-bold mb-8 leading-relaxed">
+                        インスタグラムで認知と熱狂を生み出し、信頼性の高いホームページで確実に成約へ繋げる。この導線をゼロから設計し、運用まで私たちが一貫して実行します。
+                    </p>
+                    <a href="service.html" class="inline-block bg-transparent text-white font-bold py-3 px-8 border-2 border-white hover:bg-white hover:text-black transition-colors duration-300">
+                        サービス詳細を見る
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black pt-16 pb-8 border-t-2 border-bordergray">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center md:items-start gap-8 mb-12">
+            <div>
+                <a href="index.html" class="text-3xl font-black tracking-wider text-white block mb-4">
+                    WEBPARTNER<span class="text-crimson">.</span>
+                </a>
+                <p class="text-gray-400 font-bold">あなたのビジネスに伴走する、超・密着型Webパートナー</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-4 md:gap-8 text-center md:text-left">
+                <a href="philosophy.html#company" class="text-gray-300 font-bold hover:text-crimson transition-colors duration-300">会社概要</a>
+                <a href="philosophy.html#privacy" class="text-gray-300 font-bold hover:text-crimson transition-colors duration-300">プライバシーポリシー</a>
+                <a href="contact.html" class="text-gray-300 font-bold hover:text-crimson transition-colors duration-300">お問い合わせ</a>
+            </div>
+        </div>
+        <div class="text-center text-gray-500 font-bold text-sm">
+            &copy; 2026 WEBPARTNER. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- 追従型お問い合わせボタン (Mobile First CTA) -->
+    <div class="fixed bottom-0 left-0 w-full z-40 md:hidden">
+        <a href="contact.html" class="block w-full bg-crimson text-white text-center text-lg font-black py-5 border-t-2 border-black">
+            まずは無料で相談する
+        </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // ハンバーガーメニューの開閉制御
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const lines = menuBtn.querySelectorAll('span');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            
+            // ハンバーガーアイコンのアニメーション（×印に変化）
+            if (!mobileMenu.classList.contains('hidden')) {
+                lines[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                lines[1].style.opacity = '0';
+                lines[2].style.transform = 'rotate(-45deg) translate(7px, -7px)';
+            } else {
+                lines[0].style.transform = 'none';
+                lines[1].style.opacity = '1';
+                lines[2].style.transform = 'none';
+            }
+        });
+
+        // スクロール時のフェードインアニメーション（Intersection Observer）
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-up').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
