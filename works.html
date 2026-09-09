@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORKS | 成果と実績 - 超・密着型Webパートナー</title>
+    
+    <!-- Google Fonts: Noto Sans JP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkbase: '#0a0a0a',
+                        crimson: '#E60012',
+                        bordergray: '#333333'
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #f3f4f6;
+            -webkit-font-smoothing: antialiased;
+        }
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-up.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: #333333; }
+        ::-webkit-scrollbar-thumb:hover { background: #E60012; }
+    </style>
+</head>
+<body class="font-sans pb-20 md:pb-0">
+
+    <!-- Header (Navbar) -->
+    <header class="fixed w-full top-0 z-50 bg-darkbase/90 backdrop-blur-sm border-b-2 border-bordergray">
+        <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+            <a href="index.html" class="text-2xl font-black tracking-wider text-white">
+                WEBPARTNER<span class="text-crimson">.</span>
+            </a>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-400 font-bold hover:text-crimson transition-colors duration-300">HOME</a>
+                <a href="service.html" class="text-gray-400 font-bold hover:text-crimson transition-colors duration-300">SERVICE</a>
+                <a href="works.html" class="text-white font-bold hover:text-crimson transition-colors duration-300">WORKS</a>
+                <a href="philosophy.html" class="text-gray-400 font-bold hover:text-crimson transition-colors duration-300">PHILOSOPHY</a>
+            </nav>
+
+            <a href="contact.html" class="hidden md:inline-flex bg-crimson text-white font-bold py-3 px-6 border-2 border-crimson hover:bg-transparent hover:text-crimson transition-colors duration-300">
+                無料相談はこちら
+            </a>
+
+            <button id="menu-btn" class="md:hidden flex flex-col justify-center items-center w-10 h-10 space-y-2">
+                <span class="block w-8 h-1 bg-white transition-transform duration-300 origin-center"></span>
+                <span class="block w-8 h-1 bg-white transition-opacity duration-300"></span>
+                <span class="block w-8 h-1 bg-white transition-transform duration-300 origin-center"></span>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-darkbase border-b-2 border-bordergray">
+            <nav class="flex flex-col px-4 py-6 space-y-4">
+                <a href="index.html" class="text-gray-400 text-lg font-bold border-b border-bordergray pb-2">HOME</a>
+                <a href="service.html" class="text-gray-400 text-lg font-bold border-b border-bordergray pb-2">SERVICE</a>
+                <a href="works.html" class="text-white text-lg font-bold border-b border-bordergray pb-2">WORKS</a>
+                <a href="philosophy.html" class="text-gray-400 text-lg font-bold border-b border-bordergray pb-2">PHILOSOPHY</a>
+                <a href="contact.html" class="text-gray-400 text-lg font-bold pb-2">CONTACT</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Title Hero -->
+    <section class="pt-40 pb-20 bg-black border-b-2 border-bordergray relative overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-20">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2000&auto=format&fit=crop" class="w-full h-full object-cover mix-blend-luminosity">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10 text-center fade-up">
+            <h1 class="text-5xl md:text-7xl font-black text-white mb-6 tracking-tight">WORKS</h1>
+            <p class="text-crimson font-bold tracking-widest mb-8">成果と実績</p>
+            <h2 class="text-2xl md:text-4xl font-black leading-tight text-gray-200">
+                デザインのためのデザインはしない。<br>
+                すべては「売上」と「集客」を最大化するために。
+            </h2>
+        </div>
+    </section>
+
+    <!-- Web Design Works (Grid Layout) -->
+    <section class="py-24 bg-darkbase border-b-2 border-bordergray">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="mb-16 fade-up">
+                <h3 class="text-3xl md:text-4xl font-black text-white mb-4 border-l-8 border-crimson pl-4">Web Site Production</h3>
+                <p class="text-gray-400 font-bold">格安・爆速で構築した、成果に直結するホームページの作例。</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Work 1: 飲食店 -->
+                <div class="bg-black border-2 border-bordergray group fade-up">
+                    <div class="relative h-64 overflow-hidden border-b-2 border-bordergray">
+                        <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=1000&auto=format&fit=crop" alt="飲食店HP作例" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/50 mix-blend-multiply group-hover:bg-black/30 transition-colors duration-500"></div>
+                        <span class="absolute top-4 left-4 bg-crimson text-white text-xs font-black px-3 py-1 tracking-wider">RESTAURANT</span>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-black text-white mb-3">地元密着型 居酒屋 様</h4>
+                        <p class="text-gray-400 font-bold text-sm leading-relaxed mb-4">
+                            「宴会予約を増やしたい」という要望に対し、スマホからの電話予約・LINE予約の導線を徹底的に最適化。シズル感のある写真で直感的に訴求。
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs text-gray-300 bg-bordergray px-2 py-1">Tailwind CSS</span>
+                            <span class="text-xs text-gray-300 bg-bordergray px-2 py-1">スマホ特化</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Work 2: 美容室 -->
+                <div class="bg-black border-2 border-bordergray group fade-up" style="transition-delay: 100ms;">
+                    <div class="relative h-64 overflow-hidden border-b-2 border-bordergray">
+                        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1000&auto=format&fit=crop" alt="美容室HP作例" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/50 mix-blend-multiply group-hover:bg-black/30 transition-colors duration-500"></div>
+                        <span class="absolute top-4 left-4 bg-crimson text-white text-xs font-black px-3 py-1 tracking-wider">SALON</span>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-black text-white mb-3">プライベートサロン 様</h4>
+                        <p class="text-gray-400 font-bold text-sm leading-relaxed mb-4">
+                            インスタグラムの世界観と完全にリンクさせたダークトーンのデザイン。スタッフの指名予約への遷移をスムーズにし、新規獲得コストを削減。
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs text-gray-300 bg-bordergray px-2 py-1">ブランディング</span>
+                            <span class="text-xs text-gray-300 bg-bordergray px-2 py-1">SNS連携</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Work 3: BtoB 企業 -->
+                <div class="bg-black border-2 border-bordergray group fade-up" style="transition-delay: 200ms;">
+                    <div class="relative h-64 overflow-hidden border-b-2 border-bordergray">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1000&auto=format&fit=crop" alt="BtoB企業HP作例" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/50 mix-blend-multiply group-hover:bg-black/30 transition-colors duration-500"></div>
+                        <span class="absolute top-4 left-4 bg-crimson text-white text-xs font-black px-3 py-1 tracking-wider">CORPORATE</span>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-black text-white mb-3">建設設備工事 会社 様</h4>
+                        <p class="text-gray-400 font-bold text-sm leading-relaxed mb-4">
+                            採用強化と元請け企業からの信頼獲得を目的としたコーポレートサイト。無駄な装飾を削ぎ落とし、実績と企業理念が最短で伝わる構成に。
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs text-gray-300 bg-bordergray px-2 py-1">BtoB特化</span>
+                            <span class="text-xs text-gray-300 bg-bordergray px-2 py-1">採用強化</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Operation Results -->
+    <section class="py-24 bg-black border-b-2 border-bordergray">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="mb-16 text-right fade-up">
+                <h3 class="text-3xl md:text-4xl font-black text-white mb-4 border-r-8 border-crimson pr-4">Instagram Operations</h3>
+                <p class="text-gray-400 font-bold">フォロワー数ではなく、「売上」にこだわった運用実績。</p>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-8">
+                <!-- Result 1 -->
+                <div class="w-full md:w-1/2 bg-darkbase border-2 border-bordergray p-8 relative overflow-hidden fade-up">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-bordergray/20 rounded-full -mr-16 -mt-16"></div>
+                    <h4 class="text-2xl font-black text-white mb-6">CASE 01: 飲食店のリール動画施策</h4>
+                    
+                    <div class="flex items-end mb-6">
+                        <div class="w-1/2">
+                            <p class="text-gray-500 font-bold text-sm mb-1">運用前 (リーチ数)</p>
+                            <p class="text-2xl font-black text-gray-300">約 1,200</p>
+                        </div>
+                        <div class="w-8 text-center text-bordergray">
+                            <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </div>
+                        <div class="w-1/2 text-right">
+                            <p class="text-crimson font-bold text-sm mb-1">運用3ヶ月後</p>
+                            <p class="text-4xl md:text-5xl font-black text-white">45,000<span class="text-xl text-crimson ml-1">+</span></p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-300 font-bold leading-relaxed">
+                        「映え」よりも「リアルな厨房の活気」にフォーカスしたリール動画の台本を作成・撮影指導。新規層のリーチが爆発し、インスタ経由の予約数が前月比300%を達成。
+                    </p>
+                </div>
+
+                <!-- Result 2 -->
+                <div class="w-full md:w-1/2 bg-darkbase border-2 border-bordergray p-8 relative overflow-hidden fade-up" style="transition-delay: 100ms;">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-bordergray/20 rounded-full -mr-16 -mt-16"></div>
+                    <h4 class="text-2xl font-black text-white mb-6">CASE 02: BtoB向け商材のDM獲得</h4>
+                    
+                    <div class="flex items-end mb-6">
+                        <div class="w-1/2">
+                            <p class="text-gray-500 font-bold text-sm mb-1">運用前 (月間問合せ)</p>
+                            <p class="text-2xl font-black text-gray-300">0 件</p>
+                        </div>
+                        <div class="w-8 text-center text-bordergray">
+                            <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </div>
+                        <div class="w-1/2 text-right">
+                            <p class="text-crimson font-bold text-sm mb-1">運用半年後</p>
+                            <p class="text-4xl md:text-5xl font-black text-white">12<span class="text-xl text-crimson ml-1">件/月</span></p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-300 font-bold leading-relaxed">
+                        一見SNSに不向きなBtoB商材において、「ノウハウ解説」と「担当者の顔出し」を徹底。フォロワー数は500人未満ながら、濃い見込み客からの質の高いDM相談を毎月安定して獲得。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom CTA Section -->
+    <section class="py-24 bg-crimson">
+        <div class="max-w-4xl mx-auto px-4 text-center fade-up">
+            <h2 class="text-3xl md:text-5xl font-black text-white mb-6">次は、あなたの番です。</h2>
+            <p class="text-xl text-white font-bold mb-10 leading-relaxed">
+                現状の課題感をそのままぶつけてください。<br>
+                押し売りは一切いたしません。最適な道筋を一緒に考えます。
+            </p>
+            <a href="contact.html" class="inline-flex items-center justify-center bg-black text-white text-lg md:text-xl font-bold py-4 px-10 border-2 border-black hover:bg-transparent hover:border-white transition-all duration-300">
+                無料相談に進む
+                <svg class="w-6 h-6 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black pt-16 pb-8 border-t-2 border-bordergray">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center md:items-start gap-8 mb-12">
+            <div>
+                <a href="index.html" class="text-3xl font-black tracking-wider text-white block mb-4">
+                    WEBPARTNER<span class="text-crimson">.</span>
+                </a>
+                <p class="text-gray-400 font-bold">あなたのビジネスに伴走する、超・密着型Webパートナー</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-4 md:gap-8 text-center md:text-left">
+                <a href="philosophy.html#company" class="text-gray-300 font-bold hover:text-crimson transition-colors duration-300">会社概要</a>
+                <a href="philosophy.html#privacy" class="text-gray-300 font-bold hover:text-crimson transition-colors duration-300">プライバシーポリシー</a>
+                <a href="contact.html" class="text-gray-300 font-bold hover:text-crimson transition-colors duration-300">お問い合わせ</a>
+            </div>
+        </div>
+        <div class="text-center text-gray-500 font-bold text-sm">
+            &copy; 2026 WEBPARTNER. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky CTA -->
+    <div class="fixed bottom-0 left-0 w-full z-40 md:hidden">
+        <a href="contact.html" class="block w-full bg-black text-white text-center text-lg font-black py-5 border-t-4 border-crimson">
+            まずは無料で相談する
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const lines = menuBtn.querySelectorAll('span');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (!mobileMenu.classList.contains('hidden')) {
+                lines[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                lines[1].style.opacity = '0';
+                lines[2].style.transform = 'rotate(-45deg) translate(7px, -7px)';
+            } else {
+                lines[0].style.transform = 'none';
+                lines[1].style.opacity = '1';
+                lines[2].style.transform = 'none';
+            }
+        });
+
+        const observerOptions = { root: null, rootMargin: '0px', threshold: 0.15 };
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-up').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
