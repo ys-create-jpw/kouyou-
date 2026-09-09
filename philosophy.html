@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHILOSOPHY | ポリシーとストーリー - 超・密着型Webパートナー</title>
+    
+    <!-- Google Fonts: Noto Sans JP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkbase: '#0a0a0a',
+                        crimson: '#E60012',
+                        bordergray: '#333333'
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #f3f4f6;
+            -webkit-font-smoothing: antialiased;
+        }
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-up.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: #333333; }
+        ::-webkit-scrollbar-thumb:hover { background: #E60012; }
+    </style>
+</head>
+<body class="font-sans pb-20 md:pb-0">
+
+    <!-- Header (Navbar) -->
+    <header class="fixed w-full top-0 z-50 bg-darkbase/90 backdrop-blur-sm border-b-2 border-bordergray">
+        <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+            <a href="index.html" class="text-2xl font-black tracking-wider text-white">
+                WEBPARTNER<span class="text-crimson">.</span>
+            </a>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-400 font-bold hover:text-crimson transition-colors duration-300">HOME</a>
+                <a href="service.html" class="text-gray-400 font-bold hover:text-crimson transition-colors duration-300">SERVICE</a>
+                <a href="works.html" class="text-gray-400 font-bold hover:text-crimson transition-colors duration-300">WORKS</a>
+                <a href="philosophy.html" class="text-white font-bold hover:text-crimson transition-colors duration-300">PHILOSOPHY</a>
+            </nav>
+
+            <a href="contact.html" class="hidden md:inline-flex bg-crimson text-white font-bold py-3 px-6 border-2 border-crimson hover:bg-transparent hover:text-crimson transition-colors duration-300">
+                無料相談はこちら
+            </a>
+
+            <button id="menu-btn" class="md:hidden flex flex-col justify-center items-center w-10 h-10 space-y-2">
+                <span class="block w-8 h-1 bg-white transition-transform duration-300 origin-center"></span>
+                <span class="block w-8 h-1 bg-white transition-opacity duration-300"></span>
+                <span class="block w-8 h-1 bg-white transition-transform duration-300 origin-center"></span>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-darkbase border-b-2 border-bordergray">
+            <nav class="flex flex-col px-4 py-6 space-y-4">
+                <a href="index.html" class="text-gray-400 text-lg font-bold border-b border-bordergray pb-2">HOME</a>
+                <a href="service.html" class="text-gray-400 text-lg font-bold border-b border-bordergray pb-2">SERVICE</a>
+                <a href="works.html" class="text-gray-400 text-lg font-bold border-b border-bordergray pb-2">WORKS</a>
+                <a href="philosophy.html" class="text-white text-lg font-bold border-b border-bordergray pb-2">PHILOSOPHY</a>
+                <a href="contact.html" class="text-gray-400 text-lg font-bold pb-2">CONTACT</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Title Hero -->
+    <section class="pt-40 pb-20 bg-black border-b-2 border-bordergray relative overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-20">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2000&auto=format&fit=crop" class="w-full h-full object-cover mix-blend-luminosity">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10 text-center fade-up">
+            <h1 class="text-5xl md:text-7xl font-black text-white mb-6 tracking-tight">PHILOSOPHY</h1>
+            <p class="text-crimson font-bold tracking-widest mb-8">私たちのポリシーと想い</p>
+            <h2 class="text-2xl md:text-4xl font-black leading-tight text-gray-200">
+                効率よりも、あなたの笑顔。荒削りでも、<br>
+                血の通ったパートナーでありたい。
+            </h2>
+        </div>
+    </section>
+
+    <!-- Message Section -->
+    <section class="py-24 bg-darkbase border-b-2 border-bordergray">
+        <div class="max-w-4xl mx-auto px-4 fade-up">
+            <div class="mb-16 text-center">
+                <span class="text-crimson font-bold tracking-widest block mb-2">OUR CREED</span>
+                <h3 class="text-3xl md:text-5xl font-black text-white">なぜ、私たちは「ここまでやる」のか。</h3>
+            </div>
+
+            <div class="space-y-8 text-lg text-gray-300 font-bold leading-relaxed">
+                <p class="bg-black border-2 border-bordergray p-8">
+                    世の中には、数え切れないほどのホームページ制作会社やSNSコンサルが存在します。しかし、その多くは「サイトを作って納品したら終わり」「綺麗なレポートを提出して終わり」という形骸化したサービスばかりです。
+                </p>
+                <p class="bg-black border-2 border-bordergray p-8">
+                    ITが苦手な経営者様が、高いお金を払って孤立してしまう。そんな光景を私たちは何度も見てきました。「これではいけない。本当に救うべき人たちに、泥臭く寄り添う存在が必要だ」という強い想いから、この事業を立ち上げました。
+                </p>
+                <p class="bg-black border-2 border-bordergray p-8">
+                    私たちが目指すのは、単なる外注業者ではありません。あなたのビジネスの課題を自分事として捉え、時に手を汚し、撮影現場に飛び込み、二人三脚で成果を掴み取る「超・密着型Webパートナー」です。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Profile Section -->
+    <section id="company" class="py-24 bg-black border-b-2 border-bordergray">
+        <div class="max-w-4xl mx-auto px-4 fade-up">
+            <div class="mb-16 text-center">
+                <h3 class="text-3xl font-black text-white mb-2">COMPANY PROFILE</h3>
+                <p class="text-gray-400 font-bold">会社概要</p>
+                <div class="w-16 h-2 bg-crimson mx-auto mt-4"></div>
+            </div>
+
+            <div class="border-2 border-bordergray bg-darkbase">
+                <div class="flex flex-col md:flex-row border-b-2 border-bordergray">
+                    <div class="w-full md:w-1/3 p-6 bg-black font-black text-white border-b-2 md:border-b-0 md:border-r-2 border-bordergray">屋号 / 運営会社</div>
+                    <div class="w-full md:w-2/3 p-6 text-gray-300 font-bold">WEBPARTNER 事業部</div>
+                </div>
+                <div class="flex flex-col md:flex-row border-b-2 border-bordergray">
+                    <div class="w-full md:w-1/3 p-6 bg-black font-black text-white border-b-2 md:border-b-0 md:border-r-2 border-bordergray">代表責任者</div>
+                    <div class="w-full md:w-2/3 p-6 text-gray-300 font-bold">齋藤 祥希</div>
+                </div>
+                <div class="flex flex-col md:flex-row border-b-2 border-bordergray">
+                    <div class="w-full md:w-1/3 p-6 bg-black font-black text-white border-b-2 md:border-b-0 md:border-r-2 border-bordergray">所在地</div>
+                    <div class="w-full md:w-2/3 p-6 text-gray-300 font-bold">埼玉県さいたま市</div>
+                </div>
+                <div class="flex flex-col md:flex-row">
+                    <div class="w-full md:w-1/3 p-6 bg-black font-black text-white border-b-2 md:border-b-0 md:border-r-2 border-bordergray">事業内容</div>
+                    <div class="w-full md:w-2/3 p-6 text-gray-300 font-bold">BtoB向けホームページ制作、Instagram運用代行支援、Web集客コンサルティング</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Policy Section -->
+    <section id="privacy" class="py-24 bg-darkbase border-b-2 border-bordergray">
+        <div class="max-w-4xl mx-auto px-4 fade-up">
+            <div class="mb-16 text-center">
+                <h3 class="text-3xl font-black text-white mb-2">PRIVACY POLICY</h3>
+                <p class="text-gray-400 font-bold">プライバシーポリシー</p>
+                <div class="w-16 h-2 bg-crimson mx-auto mt-4"></div>
+            </div>
+
+            <div class="bg-black border-2 border-bordergray p-8 space-y-6 text-gray-300 font-bold text-sm md:text-base leading-relaxed">
+                <p>
+                    WEBPARTNER（以下、「当方」と言います。）は、お客様の個人情報の重要性を認識し、個人情報の保護に関する法律を遵守するとともに、以下のプライバシーポリシーに基づき、適切な取り扱いに努めます。
+                </p>
+                <div>
+                    <h4 class="text-white font-black text-lg mb-2 text-crimson">1. 個人情報の収集について</h4>
+                    <p>当方は、お問い合わせフォーム等のサービスをご利用いただく際に、お名前、メールアドレス、電話番号などの個人情報をご提供いただく場合があります。収集した個人情報は、あらかじめ通知した目的の範囲内でのみ利用いたします。</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-black text-lg mb-2 text-crimson">2. 個人情報の利用目的</h4>
+                    <p>ご提供いただいた個人情報は、お問い合わせに対する回答や、必要な情報をご案内するために電子メール等を利用して連絡する目的でのみ使用し、第三者に開示・提供いたしません。</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-black text-lg mb-2 text-crimson">3. 個人情報の管理について</h4>
+                    <p>当方は、お客様の個人情報を正確かつ最新の状態に保ち、漏えい、紛失、改ざん等を防止するため、厳重なセキュリティ対策を実施し、適切な管理を行います。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black pt-16 pb-8 border-t-2 border-bordergray">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center md:items-start gap-8 mb-12">
+            <div>
+                <a href="index.html" class="text-3xl font-black tracking-wider text-white block mb-4">
+                    WEBPARTNER<span class="text-crimson">.</span>
+                </a>
+                <p class="text-gray-400 font-bold">あなたのビジネスに伴走する、超・密着型Webパートナー</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-4 md:gap-8 text-center md:text-left">
+                <a href="#company" class="text-gray-300 font-bold hover:text-crimson transition-colors duration-300">会社概要</a>
+                <a href="#privacy" class="text-gray-300 font-bold hover:text-crimson transition-colors duration-300">プライバシーポリシー</a>
+                <a href="contact.html" class="text-gray-300 font-bold hover:text-crimson transition-colors duration-300">お問い合わせ</a>
+            </div>
+        </div>
+        <div class="text-center text-gray-500 font-bold text-sm">
+            &copy; 2026 WEBPARTNER. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky CTA -->
+    <div class="fixed bottom-0 left-0 w-full z-40 md:hidden">
+        <a href="contact.html" class="block w-full bg-crimson text-white text-center text-lg font-black py-5 border-t-2 border-black">
+            まずは無料で相談する
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const lines = menuBtn.querySelectorAll('span');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (!mobileMenu.classList.contains('hidden')) {
+                lines[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                lines[1].style.opacity = '0';
+                lines[2].style.transform = 'rotate(-45deg) translate(7px, -7px)';
+            } else {
+                lines[0].style.transform = 'none';
+                lines[1].style.opacity = '1';
+                lines[2].style.transform = 'none';
+            }
+        });
+
+        const observerOptions = { root: null, rootMargin: '0px', threshold: 0.15 };
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-up').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
