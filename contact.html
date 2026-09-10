@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT | 無料相談・お問い合わせ - 超・密着型Webパートナー</title>
+    
+    <!-- Google Fonts: Noto Sans JP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkbase: '#0a0a0a',
+                        crimson: '#E60012',
+                        bordergray: '#333333'
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #f3f4f6;
+            -webkit-font-smoothing: antialiased;
+        }
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-up.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* 入力フォームのオートフィル背景色対策 (Chrome用) */
+        input:-webkit-autofill,
+        textarea:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0px 1000px #0a0a0a inset;
+            -webkit-text-fill-color: #ffffff;
+            transition: background-color 5000s ease-in-out 0s;
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: #333333; }
+        ::-webkit-scrollbar-thumb:hover { background: #E60012; }
+    </style>
+</head>
+<body class="font-sans pb-20 md:pb-0">
+
+    <!-- Header (Navbar) -->
+    <header class="fixed w-full top-0 z-50 bg-darkbase/90 backdrop-blur-sm border-b-2 border-bordergray">
+        <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+            <a href="index.html" class="text-2xl font-black tracking-wider text-white">
+                WEBPARTNER<span class="text-crimson">.</span>
+            </a>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-400 font-bold hover:text-crimson transition-colors duration-300">HOME</a>
+                <a href="service.html" class="text-gray-400 font-bold hover:text-crimson transition-colors duration-300">SERVICE</a>
+                <a href="works.html" class="text-gray-400 font-bold hover:text-crimson transition-colors duration-300">WORKS</a>
+                <a href="philosophy.html" class="text-gray-400 font-bold hover:text-crimson transition-colors duration-300">PHILOSOPHY</a>
+            </nav>
+
+            <a href="contact.html" class="hidden md:inline-flex bg-crimson text-white font-bold py-3 px-6 border-2 border-crimson hover:bg-transparent hover:text-crimson transition-colors duration-300">
+                無料相談はこちら
+            </a>
+
+            <button id="menu-btn" class="md:hidden flex flex-col justify-center items-center w-10 h-10 space-y-2">
+                <span class="block w-8 h-1 bg-white transition-transform duration-300 origin-center"></span>
+                <span class="block w-8 h-1 bg-white transition-opacity duration-300"></span>
+                <span class="block w-8 h-1 bg-white transition-transform duration-300 origin-center"></span>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-darkbase border-b-2 border-bordergray">
+            <nav class="flex flex-col px-4 py-6 space-y-4">
+                <a href="index.html" class="text-gray-400 text-lg font-bold border-b border-bordergray pb-2">HOME</a>
+                <a href="service.html" class="text-gray-400 text-lg font-bold border-b border-bordergray pb-2">SERVICE</a>
+                <a href="works.html" class="text-gray-400 text-lg font-bold border-b border-bordergray pb-2">WORKS</a>
+                <a href="philosophy.html" class="text-gray-400 text-lg font-bold border-b border-bordergray pb-2">PHILOSOPHY</a>
+                <a href="contact.html" class="text-white text-lg font-bold pb-2">CONTACT</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Title Hero -->
+    <section class="pt-40 pb-20 bg-black border-b-2 border-bordergray relative overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-20">
+            <img src="https://images.unsplash.com/photo-1534536281715-e28d76689b4d?q=80&w=2000&auto=format&fit=crop" class="w-full h-full object-cover mix-blend-luminosity">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10 text-center fade-up">
+            <h1 class="text-5xl md:text-7xl font-black text-white mb-6 tracking-tight">CONTACT</h1>
+            <p class="text-crimson font-bold tracking-widest mb-8">無料相談・お問い合わせ</p>
+            <h2 class="text-2xl md:text-4xl font-black leading-tight text-gray-200">
+                ビジネスの課題を、そのままぶつけてください。
+            </h2>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="py-24 bg-darkbase border-b-2 border-bordergray">
+        <div class="max-w-3xl mx-auto px-4 fade-up">
+            <p class="text-gray-300 font-bold mb-10 text-center leading-relaxed">
+                以下のフォームにご入力の上、「送信する」ボタンを押してください。<br>
+                2営業日以内に、担当の齋藤よりご連絡させていただきます。<br>
+                ※強引な営業や押し売りは一切行いませんので、ご安心ください。
+            </p>
+
+            <div class="bg-black border-2 border-bordergray p-6 md:p-12">
+                <form id="contact-form" class="space-y-8">
+                    
+                    <!-- 会社名・店舗名 -->
+                    <div>
+                        <label for="company" class="block text-white font-black mb-2">会社名・店舗名 <span class="text-gray-500 text-sm font-bold ml-2">任意</span></label>
+                        <input type="text" id="company" name="company" class="w-full bg-darkbase border-2 border-bordergray text-white p-4 focus:outline-none focus:border-crimson transition-colors duration-300" placeholder="株式会社WEBPARTNER">
+                    </div>
+
+                    <!-- ご担当者名 -->
+                    <div>
+                        <label for="name" class="block text-white font-black mb-2">ご担当者名 <span class="bg-crimson text-white text-xs px-2 py-1 ml-2">必須</span></label>
+                        <input type="text" id="name" name="name" required class="w-full bg-darkbase border-2 border-bordergray text-white p-4 focus:outline-none focus:border-crimson transition-colors duration-300" placeholder="山田 太郎">
+                    </div>
+
+                    <!-- メールアドレス -->
+                    <div>
+                        <label for="email" class="block text-white font-black mb-2">メールアドレス <span class="bg-crimson text-white text-xs px-2 py-1 ml-2">必須</span></label>
+                        <input type="email" id="email" name="email" required class="w-full bg-darkbase border-2 border-bordergray text-white p-4 focus:outline-none focus:border-crimson transition-colors duration-300" placeholder="info@example.com">
+                    </div>
+
+                    <!-- 電話番号 -->
+                    <div>
+                        <label for="phone" class="block text-white font-black mb-2">電話番号 <span class="text-gray-500 text-sm font-bold ml-2">任意</span></label>
+                        <input type="tel" id="phone" name="phone" class="w-full bg-darkbase border-2 border-bordergray text-white p-4 focus:outline-none focus:border-crimson transition-colors duration-300" placeholder="090-1234-5678">
+                    </div>
+
+                    <!-- ご相談内容 -->
+                    <div>
+                        <label class="block text-white font-black mb-4">ご興味のあるサービス（複数選択可）</label>
+                        <div class="space-y-4">
+                            <label class="flex items-center cursor-pointer group">
+                                <input type="checkbox" name="service" value="格安HP制作" class="hidden peer">
+                                <div class="w-6 h-6 border-2 border-bordergray bg-darkbase peer-checked:bg-crimson peer-checked:border-crimson flex items-center justify-center transition-colors mr-4 group-hover:border-gray-400">
+                                    <svg class="w-4 h-4 text-white opacity-0 peer-checked:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                                </div>
+                                <span class="text-gray-300 font-bold group-hover:text-white transition-colors">格安・爆速HP制作について</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer group">
+                                <input type="checkbox" name="service" value="インスタ運用代行" class="hidden peer">
+                                <div class="w-6 h-6 border-2 border-bordergray bg-darkbase peer-checked:bg-crimson peer-checked:border-crimson flex items-center justify-center transition-colors mr-4 group-hover:border-gray-400">
+                                    <svg class="w-4 h-4 text-white opacity-0 peer-checked:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                                </div>
+                                <span class="text-gray-300 font-bold group-hover:text-white transition-colors">泥臭いインスタ運用代行について</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer group">
+                                <input type="checkbox" name="service" value="その他・相談" class="hidden peer">
+                                <div class="w-6 h-6 border-2 border-bordergray bg-darkbase peer-checked:bg-crimson peer-checked:border-crimson flex items-center justify-center transition-colors mr-4 group-hover:border-gray-400">
+                                    <svg class="w-4 h-4 text-white opacity-0 peer-checked:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                                </div>
+                                <span class="text-gray-300 font-bold group-hover:text-white transition-colors">その他・まずは現状の課題を相談したい</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- メッセージ -->
+                    <div>
+                        <label for="message" class="block text-white font-black mb-2">現状の課題やご要望など <span class="bg-crimson text-white text-xs px-2 py-1 ml-2">必須</span></label>
+                        <textarea id="message" name="message" required rows="6" class="w-full bg-darkbase border-2 border-bordergray text-white p-4 focus:outline-none focus:border-crimson transition-colors duration-300 resize-none" placeholder="例）自社のHPが古くリニューアルを検討しているが、予算を抑えたい。また、インスタ集客にも興味があるが何から始めていいか分からないため、一度打ち合わせをお願いしたいです。"></textarea>
+                    </div>
+
+                    <!-- プライバシーポリシー同意 -->
+                    <div class="pt-4 border-t-2 border-bordergray">
+                        <label class="flex items-center justify-center cursor-pointer group">
+                            <input type="checkbox" id="privacy-check" required class="hidden peer">
+                            <div class="w-6 h-6 border-2 border-bordergray bg-darkbase peer-checked:bg-crimson peer-checked:border-crimson flex items-center justify-center transition-colors mr-4 group-hover:border-gray-400 flex-shrink-0">
+                                <svg class="w-4 h-4 text-white opacity-0 peer-checked:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <span class="text-gray-400 font-bold text-sm">
+                                <a href="philosophy.html#privacy" target="_blank" class="text-white underline hover:text-crimson">プライバシーポリシー</a>に同意する
+                            </span>
+                        </label>
+                    </div>
+
+                    <!-- 送信ボタン -->
+                    <div class="text-center pt-6">
+                        <button type="submit" id="submit-btn" class="w-full md:w-auto inline-flex items-center justify-center bg-crimson text-white text-lg md:text-xl font-black py-4 px-16 border-2 border-crimson hover:bg-transparent hover:text-crimson transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
+                            <span id="btn-text">送信する</span>
+                            <svg id="btn-icon" class="w-6 h-6 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                            <!-- ローディングスピナー（初期非表示） -->
+                            <svg id="btn-spinner" class="animate-spin w-6 h-6 ml-2 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                        </button>
+                    </div>
+
+                    <!-- 送信完了・エラーメッセージ表示エリア -->
+                    <div id="form-message" class="hidden text-center font-bold p-4 mt-4"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black pt-16 pb-8 border-t-2 border-bordergray">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center md:items-start gap-8 mb-12">
+            <div>
+                <a href="index.html" class="text-3xl font-black tracking-wider text-white block mb-4">
+                    WEBPARTNER<span class="text-crimson">.</span>
+                </a>
+                <p class="text-gray-400 font-bold">あなたのビジネスに伴走する、超・密着型Webパートナー</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-4 md:gap-8 text-center md:text-left">
+                <a href="philosophy.html#company" class="text-gray-300 font-bold hover:text-crimson transition-colors duration-300">会社概要</a>
+                <a href="philosophy.html#privacy" class="text-gray-300 font-bold hover:text-crimson transition-colors duration-300">プライバシーポリシー</a>
+                <a href="contact.html" class="text-white font-bold hover:text-crimson transition-colors duration-300">お問い合わせ</a>
+            </div>
+        </div>
+        <div class="text-center text-gray-500 font-bold text-sm">
+            &copy; 2026 WEBPARTNER. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // ハンバーガーメニュー制御
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const lines = menuBtn.querySelectorAll('span');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (!mobileMenu.classList.contains('hidden')) {
+                lines[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                lines[1].style.opacity = '0';
+                lines[2].style.transform = 'rotate(-45deg) translate(7px, -7px)';
+            } else {
+                lines[0].style.transform = 'none';
+                lines[1].style.opacity = '1';
+                lines[2].style.transform = 'none';
+            }
+        });
+
+        // アニメーション制御
+        const observerOptions = { root: null, rootMargin: '0px', threshold: 0.15 };
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        document.querySelectorAll('.fade-up').forEach((el) => { observer.observe(el); });
+
+        // --- GAS連携フォーム送信処理 ---
+        // ★ 注意: 以下のURLを、ご自身でデプロイしたGASの「ウェブアプリのURL」に書き換えてください。
+        const GAS_WEB_APP_URL = "YOUR_GAS_WEBAPP_URL_HERE"; 
+
+        const form = document.getElementById('contact-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const btnText = document.getElementById('btn-text');
+        const btnIcon = document.getElementById('btn-icon');
+        const btnSpinner = document.getElementById('btn-spinner');
+        const formMessage = document.getElementById('form-message');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // UIを送信中状態に変更
+            submitBtn.disabled = true;
+            btnText.textContent = '送信中...';
+            btnIcon.classList.add('hidden');
+            btnSpinner.classList.remove('hidden');
+            formMessage.classList.add('hidden');
+
+            // フォームデータの収集
+            const formData = new FormData(form);
+            
+            // チェックボックス（複数選択）の値を配列で取得し、カンマ区切り文字列に変換
+            const selectedServices = [];
+            document.querySelectorAll('input[name="service"]:checked').forEach(cb => {
+                selectedServices.push(cb.value);
+            });
+            formData.set('service', selectedServices.join(', '));
+
+            try {
+                // GASへPOSTリクエスト（CORSエラーを回避するため no-cors モードを指定する場合が多いですが、
+                // 今回はURLSearchParamsを使った標準的なx-www-form-urlencodedで送信します）
+                const params = new URLSearchParams();
+                for (const pair of formData.entries()) {
+                    params.append(pair[0], pair[1]);
+                }
+
+                const response = await fetch(GAS_WEB_APP_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: params
+                });
+
+                // 送信成功時（※no-corsの場合はresponse.okは取れないため、今回は標準のPOSTを想定）
+                formMessage.textContent = 'お問い合わせを送信しました。内容を確認次第、ご連絡いたします。';
+                formMessage.className = 'block text-center font-bold p-4 mt-8 bg-bordergray text-white border-l-4 border-crimson';
+                form.reset();
+
+            } catch (error) {
+                // エラー時
+                console.error('Error:', error);
+                formMessage.textContent = '送信に失敗しました。時間をおいて再度お試しください。';
+                formMessage.className = 'block text-center font-bold p-4 mt-8 bg-red-900/50 text-white border-l-4 border-crimson';
+            } finally {
+                // UIを元に戻す
+                submitBtn.disabled = false;
+                btnText.textContent = '送信する';
+                btnIcon.classList.remove('hidden');
+                btnSpinner.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
