@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOIR HAIR & PRIVATE SALON | 完全予約制プライベートサロン</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Cormorant Garamond & Noto Sans JP -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+    }
+    .font-serif-en {
+      font-family: 'Cormorant Garamond', serif;
+    }
+  </style>
+</head>
+<body class="bg-[#0D0D0D] text-neutral-300 antialiased pb-24 md:pb-0 selection:bg-amber-700 selection:text-white">
+
+  <!-- ヘッダー -->
+  <header class="fixed top-0 left-0 right-0 z-40 bg-[#0D0D0D]/90 backdrop-blur border-b border-neutral-800">
+    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="#" class="flex flex-col">
+        <span class="font-serif-en text-2xl tracking-[0.25em] text-neutral-100 font-semibold uppercase">NOIR</span>
+        <span class="text-[9px] tracking-[0.3em] text-neutral-500 uppercase">Private Hair Salon</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-xs font-light tracking-widest text-neutral-400 uppercase">
+        <a href="#concept" class="hover:text-amber-500 transition duration-300">Concept</a>
+        <a href="#stylist" class="hover:text-amber-500 transition duration-300">Stylist</a>
+        <a href="#menu" class="hover:text-amber-500 transition duration-300">Menu</a>
+        <a href="#instagram" class="hover:text-amber-500 transition duration-300">Style / Insta</a>
+        <a href="#access" class="hover:text-amber-500 transition duration-300">Access</a>
+      </nav>
+      <div class="hidden md:block">
+        <button onclick="openBookingModal('指名なし（初回おまかせ）')" class="border border-amber-600/60 bg-amber-600/10 text-amber-400 text-xs font-light tracking-widest px-6 py-2.5 hover:bg-amber-600 hover:text-white transition duration-300 cursor-pointer">
+          RESERVATION
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-20">
+    <!-- ファーストビュー (Hero) -->
+    <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden border-b border-neutral-800">
+      <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1800&q=80" alt="サロン空間" class="w-full h-full object-cover opacity-30 filter grayscale contrast-125">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-transparent to-[#0D0D0D]/60"></div>
+      </div>
+
+      <div class="relative z-10 max-w-4xl mx-auto px-6 text-center py-20">
+        <span class="text-amber-500 text-xs font-serif-en tracking-[0.4em] uppercase block mb-4">Tokyo / Omotesando</span>
+        <h1 class="font-serif-en text-4xl sm:text-6xl lg:text-7xl font-light tracking-wider text-neutral-100 leading-tight mb-6">
+          SILENCE & ARCHITECTURE
+        </h1>
+        <p class="text-xs sm:text-sm text-neutral-400 font-light tracking-widest leading-loose max-w-lg mx-auto mb-10">
+          全席完全個室。髪質改善と骨格矯正カットに特化した、<br>静寂と美意識が交差するプライベートサロン。
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#stylist" class="w-full sm:w-auto bg-neutral-100 text-neutral-900 text-xs tracking-widest font-medium px-8 py-3.5 hover:bg-amber-500 hover:text-white transition duration-300 text-center">
+            スタイリスト指名予約
+          </a>
+          <a href="#instagram" class="w-full sm:w-auto border border-neutral-700 bg-black/40 text-neutral-300 text-xs tracking-widest px-8 py-3.5 hover:border-neutral-500 transition duration-300 text-center">
+            Instagramの作例を見る
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- コンセプト (Concept) -->
+    <section id="concept" class="py-20 md:py-32 border-b border-neutral-900">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="relative">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="スタイリング風景" class="w-full h-96 object-cover border border-neutral-800 filter brightness-90">
+            <div class="absolute -bottom-4 -right-4 border border-amber-500/40 w-full h-full -z-10 hidden sm:block"></div>
+          </div>
+          <div>
+            <span class="font-serif-en text-xs tracking-[0.3em] text-amber-500 uppercase block mb-2">Philosophy</span>
+            <h2 class="text-2xl md:text-3xl font-light text-neutral-100 tracking-wide mb-6">
+              一人ひとりの骨格と、<br>日常の光に溶け込むヘアデザイン。
+            </h2>
+            <p class="text-xs text-neutral-400 leading-relaxed font-light mb-6">
+              大型サロンのような慌ただしさや待ち時間はありません。カウンセリングから仕上げまで、専任のトップスタイリストがマンツーマンで担当いたします。
+            </p>
+            <div class="space-y-3 text-xs text-neutral-300 border-t border-neutral-800 pt-6">
+              <p class="flex items-center gap-2"><span class="text-amber-500">―</span> 全席フルフラット・完全個室ブース完備</p>
+              <p class="flex items-center gap-2"><span class="text-amber-500">―</span> 厳選されたオーガニック＆高濃度トリートメント</p>
+              <p class="flex items-center gap-2"><span class="text-amber-500">―</span> 施術前の明確なカウンセリングと料金提示</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- スタイリスト指名予約 (Stylist & Direct Reservation) -->
+    <section id="stylist" class="py-20 md:py-32 bg-neutral-950/60 border-b border-neutral-900">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <span class="font-serif-en text-xs tracking-[0.3em] text-amber-500 uppercase block mb-2">Stylist Booking</span>
+          <h2 class="text-2xl md:text-3xl font-light text-neutral-100 tracking-wide">スタイリスト指名予約</h2>
+          <p class="text-xs text-neutral-400 mt-2 font-light">得意とするテイストやInstagramの発信内容から、担当者をお選びいただけます。</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- スタイリスト 1 -->
+          <div class="bg-neutral-900 border border-neutral-800 p-6 flex flex-col justify-between group hover:border-neutral-700 transition">
+            <div class="flex gap-6 mb-6">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="スタイリスト写真" class="w-24 h-32 object-cover filter grayscale contrast-125 border border-neutral-800">
+              <div class="flex-1">
+                <span class="text-[10px] tracking-widest text-amber-500 uppercase font-serif-en">Representative / Top Stylist</span>
+                <h3 class="text-lg text-neutral-100 font-medium tracking-wide mt-1">KENTO SHIMIZU</h3>
+                <p class="text-[11px] text-neutral-400 mt-1 mb-2 font-light">骨格矯正ショート / レイヤーカット特化</p>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-[11px] text-neutral-400 hover:text-white transition">
+                  <span>Instagram</span>
+                  <span class="text-amber-500">@kento_noir &rarr;</span>
+                </a>
+              </div>
+            </div>
+            <p class="text-xs text-neutral-400 leading-relaxed font-light mb-6">
+              「360度どこから見ても美しいシルエット」を追求。乾かすだけで決まる再現性の高いショートスタイルをご提案します。
+            </p>
+            <div class="space-y-2">
+              <button onclick="openBookingModal('KENTO SHIMIZU')" class="w-full block text-center bg-neutral-100 hover:bg-amber-600 hover:text-white text-neutral-950 font-medium text-xs py-3 tracking-widest transition duration-300 cursor-pointer">
+                KENTOを指名してWEB予約
+              </button>
+              <button onclick="alert('LINE公式アカウントへの連携モックです。直接スタイリストへの事前髪質相談が可能です。')" class="w-full block text-center border border-neutral-800 hover:border-neutral-600 text-neutral-400 text-[11px] py-2 tracking-wider transition cursor-pointer">
+                LINEで事前髪質相談
+              </button>
+            </div>
+          </div>
+
+          <!-- スタイリスト 2 -->
+          <div class="bg-neutral-900 border border-neutral-800 p-6 flex flex-col justify-between group hover:border-neutral-700 transition">
+            <div class="flex gap-6 mb-6">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="スタイリスト写真" class="w-24 h-32 object-cover filter grayscale contrast-125 border border-neutral-800">
+              <div class="flex-1">
+                <span class="text-[10px] tracking-widest text-amber-500 uppercase font-serif-en">Color Specialist</span>
+                <h3 class="text-lg text-neutral-100 font-medium tracking-wide mt-1">SAYAKA MIURA</h3>
+                <p class="text-[11px] text-neutral-400 mt-1 mb-2 font-light">艶髪・透明感カラー / 髪質改善トリートメント</p>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-[11px] text-neutral-400 hover:text-white transition">
+                  <span>Instagram</span>
+                  <span class="text-amber-500">@sayaka_color &rarr;</span>
+                </a>
+              </div>
+            </div>
+            <p class="text-xs text-neutral-400 leading-relaxed font-light mb-6">
+              ブリーチなしでも叶う透明感と、ダメージを最小限に抑えたケア技術。上品で洗練された大人カラーはお任せください。
+            </p>
+            <div class="space-y-2">
+              <button onclick="openBookingModal('SAYAKA MIURA')" class="w-full block text-center bg-neutral-100 hover:bg-amber-600 hover:text-white text-neutral-950 font-medium text-xs py-3 tracking-widest transition duration-300 cursor-pointer">
+                SAYAKAを指名してWEB予約
+              </button>
+              <button onclick="alert('LINE公式アカウントへの連携モックです。直接スタイリストへの事前髪質相談が可能です。')" class="w-full block text-center border border-neutral-800 hover:border-neutral-600 text-neutral-400 text-[11px] py-2 tracking-wider transition cursor-pointer">
+                LINEで事前髪質相談
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instagramギャラリー連携 (Instagram Grid) -->
+    <section id="instagram" class="py-20 md:py-32 border-b border-neutral-900">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+          <div>
+            <span class="font-serif-en text-xs tracking-[0.3em] text-amber-500 uppercase block mb-2">Style Gallery</span>
+            <h2 class="text-2xl md:text-3xl font-light text-neutral-100 tracking-wide">Instagramとリンクする作例</h2>
+          </div>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="mt-4 md:mt-0 inline-flex items-center gap-2 text-xs text-neutral-400 hover:text-amber-400 transition tracking-widest">
+            <span>OFFICIAL INSTAGRAM @noir_hair</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-4">
+          <div class="group relative aspect-square overflow-hidden bg-neutral-900">
+            <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=500&q=80" alt="ヘアスタイル作例" class="w-full h-full object-cover filter brightness-90 group-hover:scale-105 group-hover:brightness-100 transition duration-500">
+            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center p-4 text-center">
+              <span class="text-[11px] text-neutral-200 tracking-wider">#骨格矯正ショート<br>指名：KENTO</span>
+            </div>
+          </div>
+          <div class="group relative aspect-square overflow-hidden bg-neutral-900">
+            <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=500&q=80" alt="ヘアスタイル作例" class="w-full h-full object-cover filter brightness-90 group-hover:scale-105 group-hover:brightness-100 transition duration-500">
+            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center p-4 text-center">
+              <span class="text-[11px] text-neutral-200 tracking-wider">#オリーブグレージュ<br>指名：SAYAKA</span>
+            </div>
+          </div>
+          <div class="group relative aspect-square overflow-hidden bg-neutral-900">
+            <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=500&q=80" alt="ヘアスタイル作例" class="w-full h-full object-cover filter brightness-90 group-hover:scale-105 group-hover:brightness-100 transition duration-500">
+            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center p-4 text-center">
+              <span class="text-[11px] text-neutral-200 tracking-wider">#レイヤーボブ<br>指名：KENTO</span>
+            </div>
+          </div>
+          <div class="group relative aspect-square overflow-hidden bg-neutral-900">
+            <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=500&q=80" alt="ヘアスタイル作例" class="w-full h-full object-cover filter brightness-90 group-hover:scale-105 group-hover:brightness-100 transition duration-500">
+            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center p-4 text-center">
+              <span class="text-[11px] text-neutral-200 tracking-wider">#髪質改善トリートメント<br>指名：SAYAKA</span>
+            </div>
+          </div>
+          <div class="group relative aspect-square overflow-hidden bg-neutral-900">
+            <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=500&q=80" alt="ヘアスタイル作例" class="w-full h-full object-cover filter brightness-90 group-hover:scale-105 group-hover:brightness-100 transition duration-500">
+            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center p-4 text-center">
+              <span class="text-[11px] text-neutral-200 tracking-wider">#ハンサムショート<br>指名：KENTO</span>
+            </div>
+          </div>
+          <div class="group relative aspect-square overflow-hidden bg-neutral-900">
+            <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=500&q=80" alt="ヘアスタイル作例" class="w-full h-full object-cover filter brightness-90 group-hover:scale-105 group-hover:brightness-100 transition duration-500">
+            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center p-4 text-center">
+              <span class="text-[11px] text-neutral-200 tracking-wider">#シアーブラック<br>指名：SAYAKA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- プライスリスト (Menu) -->
+    <section id="menu" class="py-20 md:py-32 border-b border-neutral-900">
+      <div class="max-w-3xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <span class="font-serif-en text-xs tracking-[0.3em] text-amber-500 uppercase block mb-2">Service & Price</span>
+          <h2 class="text-2xl md:text-3xl font-light text-neutral-100 tracking-wide">メニュー</h2>
+          <p class="text-xs text-neutral-500 mt-2 font-light">ロング料金なし・シャンプー＆ブロー込み</p>
+        </div>
+
+        <div class="space-y-6 text-sm">
+          <div class="flex justify-between items-baseline border-b border-neutral-800/80 pb-4">
+            <div>
+              <p class="font-medium text-neutral-200">骨格矯正デザインカット</p>
+              <p class="text-xs text-neutral-500 mt-0.5">再現性を重視した独自のドライカット技術</p>
+            </div>
+            <span class="font-serif-en text-lg text-amber-400">¥ 8,800</span>
+          </div>
+
+          <div class="flex justify-between items-baseline border-b border-neutral-800/80 pb-4">
+            <div>
+              <p class="font-medium text-neutral-200">プレミアム ケアカラー + カット</p>
+              <p class="text-xs text-neutral-500 mt-0.5">高浸透トリートメント配合でダメージレスな発色</p>
+            </div>
+            <span class="font-serif-en text-lg text-amber-400">¥ 16,500</span>
+          </div>
+
+          <div class="flex justify-between items-baseline border-b border-neutral-800/80 pb-4">
+            <div>
+              <p class="font-medium text-neutral-200">超音波 髪質改善トリートメント</p>
+              <p class="text-xs text-neutral-500 mt-0.5">内部補修により圧倒的なツヤとまとまりを付与</p>
+            </div>
+            <span class="font-serif-en text-lg text-amber-400">¥ 12,000</span>
+          </div>
+
+          <div class="flex justify-between items-baseline border-b border-neutral-800/80 pb-4">
+            <div>
+              <p class="font-medium text-neutral-200">ヘッドスパ（個室スチーム）</p>
+              <p class="text-xs text-neutral-500 mt-0.5">完全フラットベッドでの深層頭皮リラクゼーション</p>
+            </div>
+            <span class="font-serif-en text-lg text-amber-400">¥ 6,600</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- アクセス・店舗情報 (Access) -->
+    <section id="access" class="py-20 md:py-32">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 text-xs leading-relaxed">
+          <div>
+            <span class="font-serif-en text-xs tracking-[0.3em] text-amber-500 uppercase block mb-2">Salon Info</span>
+            <h2 class="text-2xl font-light text-neutral-100 tracking-wide mb-6">店舗情報</h2>
+            <div class="space-y-4 text-neutral-400">
+              <p><strong class="text-neutral-200 block mb-0.5 font-normal">名称</strong> NOIR HAIR & PRIVATE SALON</p>
+              <p><strong class="text-neutral-200 block mb-0.5 font-normal">所在地</strong> 〒107-0062 東京都港区南青山3-0-0 NOIR BLDG 2F</p>
+              <p><strong class="text-neutral-200 block mb-0.5 font-normal">最寄り</strong> 表参道駅 A4出口より徒歩3分</p>
+              <p><strong class="text-neutral-200 block mb-0.5 font-normal">営業時間</strong> 平日 11:00 - 21:00 / 土日祝 10:00 - 20:00</p>
+              <p><strong class="text-neutral-200 block mb-0.5 font-normal">定休日</strong> 毎週火曜日・隔週水曜日</p>
+              <p><strong class="text-neutral-200 block mb-0.5 font-normal">お支払い</strong> 現金 / クレジットカード各種 / タッチ決済</p>
+            </div>
+          </div>
+          <div class="flex flex-col justify-between">
+            <div class="w-full h-52 bg-neutral-900 border border-neutral-800 flex flex-col items-center justify-center text-neutral-500">
+              <span class="text-xl mb-1">📍</span>
+              <span>表参道駅 A4出口 徒歩3分</span>
+              <span class="text-[10px] text-neutral-600 mt-1"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1620.8918790664952!2d139.6963141983948!3d35.65769900000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b564ae9334f%3A0x1c97b7e070955b9f!2z44CSMTUwLTAwNDMg5p2x5Lqs6YO95riL6LC35Yy66YGT546E5Z2C77yR5LiB55uu77yR77yR4oiS77yR77yR!5e0!3m2!1sja!2sjp!4v1789100953618!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></span>
+            </div>
+            <div class="mt-6 p-6 bg-neutral-950 border border-neutral-800 text-center">
+              <p class="text-neutral-300 mb-4 font-light">ご新規様のご予約はスタイリスト別のWEB予約より承っております。</p>
+              <button onclick="openBookingModal('指名なし（初回おまかせ）')" class="w-full bg-neutral-200 hover:bg-white text-neutral-950 font-medium py-3 tracking-widest text-xs transition cursor-pointer">
+                スタイリストを選んで予約する
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="border-t border-neutral-900 py-8 text-center text-[10px] text-neutral-600 tracking-widest">
+    <p>&copy; 2026 NOIR HAIR & PRIVATE SALON. ALL RIGHTS RESERVED.</p>
+    <p class="mt-1 text-neutral-700">※本サイトはWeb制作ポートフォリオ用のデモページです。</p>
+  </footer>
+
+  <!-- スマホ固定フッター -->
+  <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#0D0D0D]/95 backdrop-blur border-t border-neutral-800 p-3 flex gap-2">
+    <a href="#instagram" class="flex-1 border border-neutral-700 text-neutral-300 font-light py-2.5 text-center text-xs tracking-wider">
+      Instagram
+    </a>
+    <button onclick="openBookingModal('指名なし（初回おまかせ）')" class="flex-[2] bg-neutral-100 text-neutral-950 font-medium py-2.5 text-center text-xs tracking-wider shadow-lg cursor-pointer">
+      スタイリスト指名予約
+    </button>
+  </div>
+
+  <!-- ==================== 予約モーダル（ポップアップ） ==================== -->
+  <div id="bookingModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm transition-opacity duration-300">
+    <div class="relative w-full max-w-lg bg-[#141414] border border-neutral-700 text-neutral-200 p-6 md:p-8 shadow-2xl rounded-sm">
+      
+      <!-- 閉じるボタン -->
+      <button onclick="closeBookingModal()" class="absolute top-4 right-4 text-neutral-400 hover:text-white text-xl leading-none cursor-pointer">
+        &times;
+      </button>
+
+      <!-- 入力ステップエリア -->
+      <div id="modalFormContent">
+        <div class="border-b border-neutral-800 pb-4 mb-6">
+          <span class="text-[10px] font-serif-en tracking-[0.25em] text-amber-500 uppercase block mb-1">Online Reservation</span>
+          <h3 class="text-xl font-light text-neutral-100 tracking-wide">WEB来店予約</h3>
+          <div class="mt-2 inline-flex items-center gap-2 bg-neutral-900 border border-neutral-800 px-3 py-1 text-xs">
+            <span class="text-neutral-500">指名担当:</span>
+            <span id="selectedStylistName" class="text-amber-400 font-medium tracking-wide">KENTO SHIMIZU</span>
+          </div>
+        </div>
+
+        <form id="dummyBookingForm" onsubmit="handleFormSubmit(event)" class="space-y-4 text-xs">
+          <div>
+            <label class="block text-neutral-400 mb-1 tracking-wider">ご希望メニュー</label>
+            <select class="w-full bg-neutral-900 border border-neutral-700 text-neutral-200 p-2.5 rounded-none focus:border-amber-500 focus:outline-none">
+              <option>【初回限定】骨格矯正カット + プレミアムケアカラー（¥16,500）</option>
+              <option>骨格矯正デザインカット（¥8,800）</option>
+              <option>超音波 髪質改善トリートメント + カット（¥17,600）</option>
+              <option>ヘッドスパ + 骨格矯正カット（¥14,000）</option>
+            </select>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block text-neutral-400 mb-1 tracking-wider">ご希望日</label>
+              <input type="date" required value="2026-09-15" class="w-full bg-neutral-900 border border-neutral-700 text-neutral-200 p-2.5 rounded-none focus:border-amber-500 focus:outline-none">
+            </div>
+            <div>
+              <label class="block text-neutral-400 mb-1 tracking-wider">ご希望時間</label>
+              <select class="w-full bg-neutral-900 border border-neutral-700 text-neutral-200 p-2.5 rounded-none focus:border-amber-500 focus:outline-none">
+                <option>11:00 〜</option>
+                <option>13:30 〜</option>
+                <option>16:00 〜</option>
+                <option>18:30 〜</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block text-neutral-400 mb-1 tracking-wider">お名前</label>
+              <input type="text" placeholder="山田 花子" required class="w-full bg-neutral-900 border border-neutral-700 text-neutral-200 p-2.5 rounded-none focus:border-amber-500 focus:outline-none">
+            </div>
+            <div>
+              <label class="block text-neutral-400 mb-1 tracking-wider">お電話番号</label>
+              <input type="tel" placeholder="090-0000-0000" required class="w-full bg-neutral-900 border border-neutral-700 text-neutral-200 p-2.5 rounded-none focus:border-amber-500 focus:outline-none">
+            </div>
+          </div>
+
+          <div class="pt-4">
+            <button type="submit" class="w-full bg-neutral-100 hover:bg-amber-600 hover:text-white text-neutral-950 font-medium py-3 text-xs tracking-[0.2em] transition duration-300 cursor-pointer">
+              予約内容を確認して送信
+            </button>
+            <p class="text-[10px] text-neutral-500 text-center mt-2">※これはポートフォリオ用サンプルのため実際の予約は行われません</p>
+          </div>
+        </form>
+      </div>
+
+      <!-- 送信完了演出エリア（初期状態は非表示） -->
+      <div id="modalSuccessContent" class="hidden text-center py-8">
+        <div class="w-12 h-12 border border-amber-500 text-amber-500 rounded-full flex items-center justify-center mx-auto text-xl mb-4">
+          ✓
+        </div>
+        <h4 class="text-lg font-light text-neutral-100 tracking-wider mb-2">ご予約リクエストを受け付けました</h4>
+        <p class="text-xs text-neutral-400 leading-relaxed font-light mb-6">
+          担当スタイリスト（<span id="confirmedStylistName" class="text-amber-400"></span>）より、<br>ご登録の番号へショートメッセージにて確定連絡をお送りします。
+        </p>
+        <button onclick="closeBookingModal()" class="border border-neutral-700 hover:border-neutral-500 text-neutral-300 text-xs px-8 py-2.5 tracking-widest transition cursor-pointer">
+          閉じる
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- モーダル制御スクリプト -->
+  <script>
+    const modal = document.getElementById('bookingModal');
+    const formContent = document.getElementById('modalFormContent');
+    const successContent = document.getElementById('modalSuccessContent');
+    const stylistNameLabel = document.getElementById('selectedStylistName');
+    const confirmedStylistName = document.getElementById('confirmedStylistName');
+
+    // モーダルを開く（押されたボタンに応じてスタイリスト名を代入）
+    function openBookingModal(stylistName) {
+      stylistNameLabel.textContent = stylistName;
+      confirmedStylistName.textContent = stylistName;
+      formContent.classList.remove('hidden');
+      successContent.classList.add('hidden');
+      
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    // モーダルを閉じる
+    function closeBookingModal() {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // モーダル外側（背景）クリックで閉じる
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeBookingModal();
+      }
+    });
+
+    // フォーム送信時の擬似フィードバック
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      formContent.classList.add('hidden');
+      successContent.classList.remove('hidden');
+    }
+  </script>
+
+</body>
+</html>
