@@ -2,7 +2,7 @@
 <html lang="ja" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>ヤキトリスタンド ハレトケ | 炭火焼き鳥と果実サワーのネオ酒場</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -16,10 +16,10 @@
     }
   </style>
 </head>
-<body class="bg-[#FAF8F5] text-stone-800 antialiased pb-20 md:pb-0">
+<body class="bg-[#FAF8F5] text-stone-800 antialiased pb-24 md:pb-0 overflow-x-hidden w-full">
 
   <!-- ヘッダー -->
-  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-stone-200">
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-stone-200 w-full">
     <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
       <div class="flex items-center gap-2">
         <span class="text-xs font-black tracking-widest bg-orange-500 text-white px-2 py-0.5 rounded">NEO</span>
@@ -39,9 +39,9 @@
     </div>
   </header>
 
-  <main>
+  <main class="w-full overflow-x-hidden">
     <!-- ファーストビュー (Hero) -->
-    <section class="relative bg-stone-900 text-white overflow-hidden">
+    <section class="relative bg-stone-900 text-white overflow-hidden w-full">
       <div class="absolute inset-0 opacity-40 mix-blend-overlay">
         <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1600&q=80" alt="店舗内観" class="w-full h-full object-cover">
       </div>
@@ -68,7 +68,7 @@
     </section>
 
     <!-- こだわり (Concept / Feature) -->
-    <section id="concept" class="py-16 md:py-24 max-w-5xl mx-auto px-4">
+    <section id="concept" class="py-16 md:py-24 max-w-5xl mx-auto px-4 w-full">
       <div class="text-center mb-12">
         <span class="text-orange-500 text-xs font-black uppercase tracking-widest block mb-1">Concept</span>
         <h2 class="text-2xl md:text-3xl font-black tracking-tight">ハレトケの3つの約束</h2>
@@ -76,7 +76,6 @@
       </div>
 
       <div class="grid md:grid-cols-3 gap-6">
-        <!-- カード1 -->
         <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm hover:shadow-md transition">
           <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center text-xl font-black mb-4">
             01
@@ -87,7 +86,6 @@
           </p>
         </div>
 
-        <!-- カード2 -->
         <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm hover:shadow-md transition">
           <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-xl font-black mb-4">
             02
@@ -98,7 +96,6 @@
           </p>
         </div>
 
-        <!-- カード3 -->
         <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm hover:shadow-md transition">
           <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-xl font-black mb-4">
             03
@@ -112,7 +109,7 @@
     </section>
 
     <!-- メニュー (Menu) -->
-    <section id="menu" class="py-16 md:py-24 bg-stone-100 border-y border-stone-200">
+    <section id="menu" class="py-16 md:py-24 bg-stone-100 border-y border-stone-200 w-full">
       <div class="max-w-5xl mx-auto px-4">
         <div class="text-center mb-12">
           <span class="text-orange-500 text-xs font-black uppercase tracking-widest block mb-1">Recommended</span>
@@ -121,7 +118,6 @@
         </div>
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- メニュー1 -->
           <div class="bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-sm flex flex-col">
             <div class="h-48 overflow-hidden relative">
               <span class="absolute top-3 left-3 bg-red-600 text-white text-[11px] font-bold px-2 py-0.5 rounded-full z-10">名物</span>
@@ -140,7 +136,6 @@
             </div>
           </div>
 
-          <!-- メニュー2 -->
           <div class="bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-sm flex flex-col">
             <div class="h-48 overflow-hidden relative">
               <span class="absolute top-3 left-3 bg-orange-500 text-white text-[11px] font-bold px-2 py-0.5 rounded-full z-10">人気</span>
@@ -159,7 +154,6 @@
             </div>
           </div>
 
-          <!-- メニュー3 -->
           <div class="bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-sm flex flex-col">
             <div class="h-48 overflow-hidden relative">
               <span class="absolute top-3 left-3 bg-amber-500 text-white text-[11px] font-bold px-2 py-0.5 rounded-full z-10">看板ドリンク</span>
@@ -179,7 +173,6 @@
           </div>
         </div>
 
-        <!-- その他メニュー補足 -->
         <div class="mt-8 bg-white p-6 rounded-2xl border border-stone-200 text-center max-w-xl mx-auto">
           <p class="text-sm font-bold text-stone-700 mb-1">定番の焼き鳥 1本 ¥180〜 / 一品スピード料理 ¥350〜</p>
           <p class="text-xs text-stone-500 mb-4">その日仕入れた希少部位や季節の限定串は、店内の黒板または公式SNSにて毎日更新中！</p>
@@ -192,7 +185,7 @@
     </section>
 
     <!-- 空間・客席 (Space) -->
-    <section id="space" class="py-16 md:py-24 max-w-5xl mx-auto px-4">
+    <section id="space" class="py-16 md:py-24 max-w-5xl mx-auto px-4 w-full">
       <div class="text-center mb-12">
         <span class="text-orange-500 text-xs font-black uppercase tracking-widest block mb-1">Space</span>
         <h2 class="text-2xl md:text-3xl font-black tracking-tight">気取らず過ごせる、クリーンな空間</h2>
@@ -200,7 +193,6 @@
       </div>
 
       <div class="grid md:grid-cols-2 gap-6">
-        <!-- カウンター -->
         <div class="bg-white p-6 rounded-2xl border border-stone-200 flex flex-col justify-between">
           <div>
             <div class="h-44 rounded-xl overflow-hidden mb-4">
@@ -216,7 +208,6 @@
           </div>
         </div>
 
-        <!-- テーブル -->
         <div class="bg-white p-6 rounded-2xl border border-stone-200 flex flex-col justify-between">
           <div>
             <div class="h-44 rounded-xl overflow-hidden mb-4">
@@ -235,61 +226,69 @@
     </section>
 
     <!-- 店舗情報・アクセス (Info) -->
-    <section id="info" class="py-16 md:py-24 bg-stone-900 text-white">
-      <div class="max-w-5xl mx-auto px-4">
+    <section id="info" class="py-16 md:py-24 bg-stone-900 text-white w-full overflow-hidden">
+      <div class="max-w-5xl mx-auto px-4 w-full">
         <div class="text-center mb-12">
           <span class="text-orange-400 text-xs font-black uppercase tracking-widest block mb-1">Information</span>
           <h2 class="text-2xl md:text-3xl font-black tracking-tight">店舗情報・アクセス</h2>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-8 items-start">
-          <!-- スペック表 -->
-          <div class="bg-stone-800/80 p-6 md:p-8 rounded-2xl border border-stone-700 text-sm space-y-4">
-            <div class="flex flex-col sm:flex-row sm:justify-between border-b border-stone-700 pb-3">
-              <span class="text-stone-400 text-xs sm:text-sm">店名</span>
-              <span class="font-bold">ヤキトリスタンド ハレトケ</span>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start w-full">
+          
+          <!-- スペック表（スマホで横はみ出しを防ぐよう縦積み＆折返し設定） -->
+          <div class="bg-stone-800/80 p-5 sm:p-8 rounded-2xl border border-stone-700 text-sm space-y-4 w-full max-w-full">
+            <div class="flex flex-col sm:flex-row sm:justify-between border-b border-stone-700 pb-3 gap-1">
+              <span class="text-stone-400 text-xs">店名</span>
+              <span class="font-bold sm:text-right">ヤキトリスタンド ハレトケ</span>
             </div>
-            <div class="flex flex-col sm:flex-row sm:justify-between border-b border-stone-700 pb-3">
-              <span class="text-stone-400 text-xs sm:text-sm">所在地</span>
-              <span class="font-medium text-right">〒000-0000<br>東京都〇〇区〇〇町1-2-3 1F</span>
+            <div class="flex flex-col sm:flex-row sm:justify-between border-b border-stone-700 pb-3 gap-1">
+              <span class="text-stone-400 text-xs">所在地</span>
+              <span class="font-medium sm:text-right text-xs sm:text-sm">〒332-0017 埼玉県川口市栄町3丁目1-11</span>
             </div>
-            <div class="flex flex-col sm:flex-row sm:justify-between border-b border-stone-700 pb-3">
-              <span class="text-stone-400 text-xs sm:text-sm">最寄り駅</span>
-              <span class="font-bold text-orange-400">〇〇駅 東口より徒歩2分</span>
+            <div class="flex flex-col sm:flex-row sm:justify-between border-b border-stone-700 pb-3 gap-1">
+              <span class="text-stone-400 text-xs">最寄り駅</span>
+              <span class="font-bold text-orange-400 sm:text-right">川口駅 東口より徒歩2分</span>
             </div>
-            <div class="flex flex-col sm:flex-row sm:justify-between border-b border-stone-700 pb-3">
-              <span class="text-stone-400 text-xs sm:text-sm">営業時間</span>
-              <span class="font-medium text-right">17:00 〜 23:30<br><span class="text-xs text-stone-400">（L.O. 料理22:30 / ドリンク23:00）</span></span>
+            <div class="flex flex-col sm:flex-row sm:justify-between border-b border-stone-700 pb-3 gap-1">
+              <span class="text-stone-400 text-xs">営業時間</span>
+              <div class="sm:text-right">
+                <span class="font-medium text-xs sm:text-sm block">17:00 〜 23:30</span>
+                <span class="text-[11px] text-stone-400 block">（L.O. 料理22:30 / ドリンク23:00）</span>
+              </div>
             </div>
-            <div class="flex flex-col sm:flex-row sm:justify-between border-b border-stone-700 pb-3">
-              <span class="text-stone-400 text-xs sm:text-sm">定休日</span>
-              <span class="font-bold">毎週月曜日・第2火曜日</span>
+            <div class="flex flex-col sm:flex-row sm:justify-between border-b border-stone-700 pb-3 gap-1">
+              <span class="text-stone-400 text-xs">定休日</span>
+              <span class="font-bold sm:text-right">毎週月曜日・第2火曜日</span>
             </div>
-            <div class="flex flex-col sm:flex-row sm:justify-between border-b border-stone-700 pb-3">
-              <span class="text-stone-400 text-xs sm:text-sm">決済方法</span>
-              <span class="font-medium">現金、クレジットカード、PayPay、交通系IC</span>
+            <div class="flex flex-col sm:flex-row sm:justify-between border-b border-stone-700 pb-3 gap-1">
+              <span class="text-stone-400 text-xs">決済方法</span>
+              <span class="font-medium sm:text-right text-xs sm:text-sm break-words">現金、クレカ、PayPay、交通系IC</span>
             </div>
-            <div class="flex flex-col sm:flex-row sm:justify-between">
-              <span class="text-stone-400 text-xs sm:text-sm">喫煙/禁煙</span>
-              <span class="font-medium">全席禁煙（店外に喫煙スペースあり）</span>
+            <div class="flex flex-col sm:flex-row sm:justify-between gap-1">
+              <span class="text-stone-400 text-xs">喫煙/禁煙</span>
+              <span class="font-medium sm:text-right text-xs sm:text-sm">全席禁煙（店外に喫煙ブースあり）</span>
             </div>
           </div>
 
           <!-- 地図 & 予約導線 -->
-          <div class="flex flex-col gap-6">
-            <!-- マップモック（実際はGoogle Mapsのiframe） -->
-            <div class="w-full h-56 bg-stone-800 rounded-2xl border border-stone-700 flex flex-col items-center justify-center text-stone-400 overflow-hidden relative">
-              <span class="text-2xl mb-1">📍</span>
-              <span class="text-xs font-bold"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3235.9122479005346!2d139.71801175426955!3d35.802087551905544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018936f54030bbd%3A0x1fb1aa8125f12cbe!2z44CSMzMyLTAwMTcg5Z-8546J55yM5bed5Y-j5biC5qCE55S677yT5LiB55uu77yR4oiS77yR77yRIOODl-ODqeOCpOODoOOCouODvOODkOODs-W3neWPow!5e0!3m2!1sja!2sjp!4v1789100131307!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-              </span>
-              <span class="text-[10px] text-stone-500 mt-1">（〇〇駅東口を出て直進、ファミマを右折してすぐ）</span>
+          <div class="flex flex-col gap-6 w-full max-w-full">
+            <!-- Googleマップ（幅100%、高さ240px固定ではみ出し防止） -->
+            <div class="w-full h-60 bg-stone-800 rounded-2xl border border-stone-700 overflow-hidden relative">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3235.9122479005346!2d139.71801175426955!3d35.802087551905544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018936f54030bbd%3A0x1fb1aa8125f12cbe!2z44CSMzMyLTAwMTcg5Z-8546J55yM5bed5Y-j5biC5qCE55S677yT5LiB55uu77yR4oiS77yR77yRIOODl-ODqeOCpOODoOOCouODvOODkOODs-W3neWPow!5e0!3m2!1sja!2sjp!4v1789100131307!5m2!1sja!2sjp" 
+                class="w-full h-full border-0" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
             </div>
 
             <!-- CTAボタン -->
-            <div class="bg-stone-800/80 p-6 rounded-2xl border border-stone-700 text-center">
+            <div class="bg-stone-800/80 p-5 sm:p-6 rounded-2xl border border-stone-700 text-center w-full">
               <h3 class="font-bold text-base mb-2">本日のお席のご予約・お問い合わせ</h3>
               <p class="text-xs text-stone-400 mb-4">少人数でのふらっと立ち寄りも、お気軽にご連絡ください！</p>
-              <div class="grid sm:grid-cols-2 gap-3">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <a href="tel:0000000000" class="flex items-center justify-center gap-2 bg-white text-stone-900 font-bold py-3 rounded-xl hover:bg-stone-200 transition text-sm">
                   <span>📞</span> 電話をかける
                 </a>
@@ -299,23 +298,24 @@
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
   </main>
 
   <!-- フッター -->
-  <footer class="bg-stone-950 text-stone-500 text-center py-6 text-xs border-t border-stone-800">
+  <footer class="bg-stone-950 text-stone-500 text-center py-6 text-xs border-t border-stone-800 w-full">
     <p>&copy; 2026 ヤキトリスタンド ハレトケ All Rights Reserved.</p>
     <p class="mt-1 text-[10px] text-stone-600">※本サイトはWeb制作ポートフォリオ用のサンプルページです。</p>
   </footer>
 
-  <!-- スマホ固定フッター（モバイル専用CTA） -->
-  <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur border-t border-stone-200 p-2 flex gap-2">
-    <a href="tel:0000000000" class="flex-1 flex items-center justify-center gap-1 bg-stone-900 text-white font-bold py-3 rounded-xl text-xs active:scale-95 transition shadow-sm">
+  <!-- スマホ固定フッター -->
+  <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur border-t border-stone-200 p-2 flex gap-2 shadow-lg w-full">
+    <a href="tel:0000000000" class="flex-1 flex items-center justify-center gap-1 bg-stone-900 text-white font-bold py-3 rounded-xl text-xs active:scale-95 transition">
       <span>📞</span> 電話予約
     </a>
-    <a href="#" class="flex-1 flex items-center justify-center gap-1 bg-[#06C755] text-white font-bold py-3 rounded-xl text-xs active:scale-95 transition shadow-sm">
+    <a href="#" class="flex-1 flex items-center justify-center gap-1 bg-[#06C755] text-white font-bold py-3 rounded-xl text-xs active:scale-95 transition">
       <span>💬</span> LINE予約
     </a>
   </div>
