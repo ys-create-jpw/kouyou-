@@ -96,7 +96,7 @@
       </div>
     </section>
 
-    <!-- スタイリスト指名予約 (Stylist & Direct Reservation) -->
+    <!-- スタイリスト指名予約 (Stylist) -->
     <section id="stylist" class="py-20 md:py-32 bg-neutral-950/60 border-b border-neutral-900">
       <div class="max-w-5xl mx-auto px-6">
         <div class="text-center mb-16">
@@ -163,16 +163,27 @@
       </div>
     </section>
 
-  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="mt-4 md:mt-0 inline-flex items-center gap-2 text-xs text-neutral-400 hover:text-amber-400 transition tracking-widest group">
-  <!-- Instagram SVG アイコン -->
-  <svg class="w-4 h-4 text-neutral-400 group-hover:text-amber-400 transition fill-none stroke-current stroke-2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-  </svg>
-  <span>OFFICIAL INSTAGRAM @noir_hair</span>
-  <span class="group-hover:translate-x-0.5 transition-transform">&rarr;</span>
-</a>
+    <!-- Instagramギャラリー連携 (Instagram Grid) -->
+    <section id="instagram" class="py-20 md:py-32 border-b border-neutral-900">
+      <div class="max-w-5xl mx-auto px-6">
+        
+        <!-- 見出しとリンク（左右端揃え） -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+          <div>
+            <span class="font-serif-en text-xs tracking-[0.3em] text-amber-500 uppercase block mb-2">Style Gallery</span>
+            <h2 class="text-2xl md:text-3xl font-light text-neutral-100 tracking-wide">Instagramとリンクする作例</h2>
+          </div>
+          
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="mt-4 md:mt-0 inline-flex items-center gap-2 text-xs text-neutral-400 hover:text-amber-400 transition tracking-widest group">
+            <svg class="w-4 h-4 shrink-0 fill-current text-neutral-400 group-hover:text-amber-400 transition" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+            <span>OFFICIAL INSTAGRAM @noir_hair</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+
+        <!-- 6グリッドギャラリー（横幅max-w-5xl内にしっかり収まるグリッド） -->
         <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-4">
           <div class="group relative aspect-square overflow-hidden bg-neutral-900">
             <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=500&q=80" alt="ヘアスタイル作例" class="w-full h-full object-cover filter brightness-90 group-hover:scale-105 group-hover:brightness-100 transition duration-500">
@@ -211,6 +222,7 @@
             </div>
           </div>
         </div>
+
       </div>
     </section>
 
@@ -301,7 +313,6 @@
 
           <!-- 右カラム：Googleマップ ＆ 予約ボタン -->
           <div class="space-y-6 w-full">
-            <!-- マップコンテナ：はみ出し防止 & 高さ固定（h-64 = 256px） -->
             <div class="w-full h-64 bg-neutral-900 border border-neutral-800 overflow-hidden relative">
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7479754723126!2d139.6960723!3d35.6585805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b563b00109f%3A0x337328def1e2ab26!2z44CSMTUwLTAwNDMg5p2x5Lqs6YO95riL6LC35Yy66YGT546E5Z2C77yR5LiB55uu77yR77yR4oiS77yR77yR!5e0!3m2!1sja!2sjp!4v1715000000000!5m2!1sja!2sjp" 
@@ -313,7 +324,6 @@
               </iframe>
             </div>
 
-            <!-- 予約誘導ボックス -->
             <div class="p-6 bg-neutral-950 border border-neutral-800 text-center">
               <p class="text-xs text-neutral-300 mb-4 font-light leading-relaxed">
                 ご新規様のご予約はスタイリスト別のWEB予約より承っております。
@@ -327,6 +337,7 @@
         </div>
       </div>
     </section>
+  </main>
 
   <!-- フッター -->
   <footer class="border-t border-neutral-900 py-8 text-center text-[10px] text-neutral-600 tracking-widest">
@@ -348,12 +359,10 @@
   <div id="bookingModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm transition-opacity duration-300">
     <div class="relative w-full max-w-lg bg-[#141414] border border-neutral-700 text-neutral-200 p-6 md:p-8 shadow-2xl rounded-sm">
       
-      <!-- 閉じるボタン -->
       <button onclick="closeBookingModal()" class="absolute top-4 right-4 text-neutral-400 hover:text-white text-xl leading-none cursor-pointer">
         &times;
       </button>
 
-      <!-- 入力ステップエリア -->
       <div id="modalFormContent">
         <div class="border-b border-neutral-800 pb-4 mb-6">
           <span class="text-[10px] font-serif-en tracking-[0.25em] text-amber-500 uppercase block mb-1">Online Reservation</span>
@@ -411,7 +420,6 @@
         </form>
       </div>
 
-      <!-- 送信完了演出エリア（初期状態は非表示） -->
       <div id="modalSuccessContent" class="hidden text-center py-8">
         <div class="w-12 h-12 border border-amber-500 text-amber-500 rounded-full flex items-center justify-center mx-auto text-xl mb-4">
           ✓
@@ -428,7 +436,7 @@
     </div>
   </div>
 
-  <!-- モーダル制御スクリプト -->
+  <!-- スクリプト -->
   <script>
     const modal = document.getElementById('bookingModal');
     const formContent = document.getElementById('modalFormContent');
@@ -436,7 +444,6 @@
     const stylistNameLabel = document.getElementById('selectedStylistName');
     const confirmedStylistName = document.getElementById('confirmedStylistName');
 
-    // モーダルを開く（押されたボタンに応じてスタイリスト名を代入）
     function openBookingModal(stylistName) {
       stylistNameLabel.textContent = stylistName;
       confirmedStylistName.textContent = stylistName;
@@ -447,20 +454,17 @@
       modal.classList.add('flex');
     }
 
-    // モーダルを閉じる
     function closeBookingModal() {
       modal.classList.add('hidden');
       modal.classList.remove('flex');
     }
 
-    // モーダル外側（背景）クリックで閉じる
     modal.addEventListener('click', (e) => {
       if (e.target === modal) {
         closeBookingModal();
       }
     });
 
-    // フォーム送信時の擬似フィードバック
     function handleFormSubmit(e) {
       e.preventDefault();
       formContent.classList.add('hidden');
